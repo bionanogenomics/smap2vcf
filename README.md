@@ -1,6 +1,6 @@
 # Tool for Transforming SMAP to VCF Format
 
-### Overview 
+## Overview 
 The SMAP to VCF converter tool is a stand alone python script that converts insertions and deletions in a SMAP file to VCF format. There are two required inputs to the scripts: 1) the SMAP file to convert and 2) the reference (_r.cmap file) which is generated with the SMAP. The QUAL score is calculated as -10 time the log base 10 of (1 minus the confidence)) where confidence is the SMAP confidence score for the given call. The uncertainty of the start and end positions of the SV call are provided in the INFO column. This output VCF file can be used for further downstream analysis using any tools that take VCF files as input.
 
 ##Usage
