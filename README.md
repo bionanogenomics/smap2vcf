@@ -1,7 +1,7 @@
 # Tool for Transforming SMAP to VCF Format
 
 ### Overview 
-cmap2fa.pl is a tool for converting a BioNano multi-color CMAP file of nicking enzyme label positions to an NGS FASTA file of nucleotides sequences. The tool translates each label position to an enzyme-specific sequence (as in its forward strand format), and fills every interval of two labels with “N”s.   
+The SMAP to VCF converter tool is a stand alone python script that converts insertions and deletions in a SMAP file to VCF format. There are two required inputs to the scripts: 1) the SMAP file to convert and 2) the reference (_r.cmap file) which is generated with the SMAP. The QUAL score is calculated as -10 time the log base 10 of (1 minus the confidence)) where confidence is the SMAP confidence score for the given call. The uncertainty of the start and end positions of the SV call are provided in the INFO column. This output VCF file can be used for further downstream analysis using any tools that take VCF files as input.
 
 ##Usage
 pdo `python smap_to_vcf.py -h` to see usage:
