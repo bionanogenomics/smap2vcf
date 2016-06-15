@@ -7,8 +7,6 @@ The SMAP to VCF converter tool is a stand alone python script that converts inse
 
 smap_to_vcf.py [-h] [-s SMAPPATH] [-r REFCMAPPATH] [-n SAMPLE]
 
-Stand-alone script to convert BioNano smap file format to vcf.
-
 optional arguments:
 *  -h, --help      show this help message and exit
 *  -s SMAPPATH     Path to smap file to convert (required)
