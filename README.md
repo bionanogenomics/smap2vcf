@@ -15,5 +15,8 @@ optional arguments:
 
 Note:  `python smap_to_vcf.py -h` to see usage on command line
 
+### Requirements
+This tool was designed to run with Python 2.7.  
+
 ### License
 We offer this tool for open source use under the [MIT Software License](https://opensource.org/licenses/MIT). 
