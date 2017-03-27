@@ -12,20 +12,30 @@ usage: smap_to_vcf_v2.py [-h] [-s SMAPPATH] [-r REFCMAPPATH] [-x XMAPPATH]
 Stand-alone script to convert BioNano smap file format to vcf.
 
 optional arguments:
-  -h, --help        show this help message and exit
-  -s SMAPPATH       Path to smap file to convert (required)
-  -r REFCMAPPATH    Path to reference cmap which is refered to in the smap
-                    supplied as -s argument (required)
-  -x XMAPPATH       Path to xmap which is refered to in the smap supplied as
-                    -s argument (required)
-  -n SAMPLE         Sample ID name for genotype data (optional, default
-                    "Sample1")
-  -o OUTPUT_PREFIX  Prefix for output vcf (optional, default to be same as
-                    input smap)
-  -a REF_ACCESSION  RefSeq assembly accession version (optional, default
-                    "GCA_000001405.1")
-  -b HUMAN_BOOL     Whether sample is human (optional, default "True")
-  -i EXP_ID         dbVar-required experiemnt ID (optional, default "1")
+
+    -h, --help        show this help message and exit
+  
+    -s SMAPPATH       Path to smap file to convert (required)
+  
+    -r REFCMAPPATH    Path to reference cmap which is refered to in the smap
+                     supplied as -s argument (required)
+                    
+    -x XMAPPATH       Path to xmap which is refered to in the smap supplied as
+                      -s argument (required)
+                    
+    -n SAMPLE         Sample ID name for genotype data (optional, default
+                      "Sample1")
+                    
+    -o OUTPUT_PREFIX  Prefix for output vcf (optional, default to be same as
+                      input smap)
+                    
+    -a REF_ACCESSION  RefSeq assembly accession version (optional, default
+                     "GCA_000001405.1")
+                    
+    -b HUMAN_BOOL     Whether sample is human (optional, default "True")
+  
+    -i EXP_ID         dbVar-required experiemnt ID (optional, default "1")
+
 
 Note:  `python smap_to_vcf.py -h` to see usage on command line
 
