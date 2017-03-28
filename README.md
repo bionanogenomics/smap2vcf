@@ -1,7 +1,7 @@
 # Tool for Transforming SMAP to VCF Format
 
 ### Overview 
-The SMAP to VCF converter tool is a standalone python script that converts insertion, deletion, and translocation breakpoint calls in an SMAP file to dbVar-compliant VCF v4.2 format. There are three required inputs to the script: 1) the SMAP file to convert, 2) the reference (_r.cmap file) which is generated with the SMAP, and 3) the map-to-reference alignment (.xmap file) which is generated with the SMAP. The QUAL score is calculated as -10 time the log base 10 of (1 minus the confidence)) where confidence is the SMAP confidence score for the given call. The QUAL ceiling is set at 20. The uncertainty of the start and end positions of the SV call are provided in the INFO column. This output VCF file can be used for further downstream analysis using any tools that take VCF files as input.
+The SMAP to VCF converter tool is a standalone python script that converts insertion, deletion, and translocation breakpoint calls in an SMAP file to dbVar-compliant VCF v4.2 format. There are three required inputs to the script: 1) the SMAP file to convert, 2) the reference (_r.cmap file) which is generated with the SMAP, and 3) the map-to-reference alignment (.xmap file) which is generated with the SMAP. The QUAL score is calculated as -10 times the log base 10 of (1 minus the confidence)) where confidence is the SMAP confidence score for the given call. The QUAL ceiling is set at 20. The uncertainty of the start and end positions of the SV call are provided in the INFO column. This output VCF file can be used for further downstream analysis using any tools that take VCF files as input.
 
 ###Usage
 
