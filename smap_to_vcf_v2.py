@@ -225,15 +225,15 @@ def smap_to_vcf(smappath, refcmap, xmappath, sample, output_prefix, ref_accessio
         refstartidx = int(tokens[15]) #RefStartIdx
         refstopidx  = int(tokens[16]) #RefEndIdx
         if dogeno :
-            #tokens[18] = Genotype
-            if int(tokens[19]) > 0 : #GenotypeGroup
-                if tokens[17] == "homozygous" : #zygosity
-                    gt = "1/1"
-                else : #note: treating 'unknown' same as 'heterozygous'
-                    gt = "." #"1/2"
-            else : #note that GenotypeGroup should always be -1 or > 0
+            if tokens[17] == "homozygous" : #zygosity
+                gt = "1/1"
+            elif tokens[17] == "heterozygous" :
                 gt = "0/1"
-
+            elif tokens[17] == "unknown" :
+                gt = "./."
+            else :
+                print "WANRNING: zygosity not recognized"
+                
         refstartpos = refcmap[ref][refstartidx-1] #if start site is misresolved
         if ref1 > 0 : #inversion_partial have -1 for RefcontigID2 and RefEndPos
             refstoppos = refcmap[ref1][refstopidx-1] #same for end
