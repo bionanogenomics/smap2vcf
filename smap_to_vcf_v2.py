@@ -159,7 +159,7 @@ def smap_to_vcf(smappath, refcmap, xmappath, sample, output_prefix, ref_accessio
     reference_header = "##reference=%s\n" % ref_accession
     reference_contigids = sorted([key for key in refcmap])
 
-    if human_bool:
+    if human_bool:    
         reference_contigids[22] = 'X'
         reference_contigids[23] = 'Y'
         contig_header = ["##contig=<ID=chr%s>\n" % elem for elem in reference_contigids]
@@ -486,7 +486,7 @@ def getArgs() :
     ref_accession = "GCA_000001405.1"
     parser.add_argument('-a', dest='ref_accession', help='RefSeq assembly accession version (optional, default "%s")'%ref_accession, type=str, default=ref_accession)
     human_bool = True
-    parser.add_argument('-b', dest='human_bool', help='Whether sample is human (optional, default "%s")'%human_bool, type=str, default=human_bool)
+    parser.add_argument('-b', dest='human_bool', help='Whether sample is human [True/False] (optional, default "%s")'%human_bool, type=str, default=human_bool)
     exp_id = '1'
     parser.add_argument('-i', dest='exp_id', help='dbVar-required experiemnt ID (optional, default "%s")'%exp_id, type=str, default=exp_id)
 
@@ -507,6 +507,11 @@ def getArgs() :
     human_bool = result.human_bool
     exp_id = result.exp_id
 
+    if human_bool=='False':
+        human_bool = False
+    else:
+        human_bool = True
+        
     #checking files
     if not checkFile(refcmappath,".cmap") :
         print "ERROR: reference cmap does not exist, is not readable, or does not end with '.cmap':", refcmappath
