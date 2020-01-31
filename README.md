@@ -47,3 +47,6 @@ This tool was designed to run with Python 2.7.
 
 ### License
 We offer this tool for open source use under the [MIT Software License](https://opensource.org/licenses/MIT). 
+
+### Downloads
+This tool is released with our Bionano Solve package. Here is [Bionano Solve Installation Guideline](https://bionanogenomics.com/wp-content/uploads/2017/03/30172-Bionano-Solve-Software-Installation-Guide.pdf). 
